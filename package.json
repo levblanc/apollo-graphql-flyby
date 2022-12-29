@@ -1,0 +1,20 @@
+{
+  "name": "apollo-graphql-voyage",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "update:locations": "rover subgraph publish Voyage-v86co@current --name locations --schema ./subgraph-locations/locations.graphql --routing-url http://localhost:4001",
+    "update:reviews": "rover subgraph publish Voyage-v86co@current --name reviews --schema ./subgraph-reviews/reviews.graphql --routing-url http://localhost:4002"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levblanc/apollo-graphql-voyage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levblanc/apollo-graphql-voyage/issues"
+  },
+  "homepage": "https://github.com/levblanc/apollo-graphql-voyage#readme"
+}
