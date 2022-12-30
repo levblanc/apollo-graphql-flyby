@@ -1,5 +1,5 @@
 {
-  "name": "apollo-graphql-voyage",
+  "name": "apollo-graphql-flyby",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/levblanc/apollo-graphql-voyage.git"
+    "url": "git+https://github.com/levblanc/apollo-graphql-flyby.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/levblanc/apollo-graphql-voyage/issues"
+    "url": "https://github.com/levblanc/apollo-graphql-flyby/issues"
   },
-  "homepage": "https://github.com/levblanc/apollo-graphql-voyage#readme"
+  "homepage": "https://github.com/levblanc/apollo-graphql-flyby#readme"
 }
