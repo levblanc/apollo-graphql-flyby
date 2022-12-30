@@ -16,13 +16,36 @@ type Review {
   location: Location
 }
 
+# ====== [Reference] - Code updated below ======
 # Reviews subgraph is not responsible for resolving
 # any other fields of the Location entity
 # Setting "resolvable" to `false` tells the router that
 # this subgraph doesn't define a reference resolver for
 # this entity
-type Location @key(fields: "id", resolvable: false) {
+
+# type Location @key(fields: "id", resolvable: false) {
+#   id: ID!
+# }
+# ====== [Reference] - Code updated below ======
+
+# By default, a subgraph should only contribute fields
+# that aren't defined by other subgraphs
+# with the exception of the primary key field
+
+# This means, because the Locations subgraph defineds
+# `name`, `description` & `photo` as fields for the Location type
+# We won't and shouldn't define those fields here in the Reviews subgraph
+
+# Because we now want the Reviews subgraph to contribute new fields to
+# the Location definition, we need to remove the `resolvable: false` property
+# This will enable Reviews subgraph to define and resolve its own Location fields
+
+type Location @key(fields: "id") {
   id: ID!
+  "The calculated overall rating based on all reviews"
+  overallRating: Float
+  "All submitted reviews about this location"
+  reviewsForLocation: [Review]!
 }
 
 type Mutation {

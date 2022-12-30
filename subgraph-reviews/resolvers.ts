@@ -9,6 +9,14 @@ const resolvers = {
       return { id: locationId };
     },
   },
+  Location: {
+    overallRating: ({ id }, _, { dataSources }) => {
+      return dataSources.reviewsAPI.getOverallRatingForLocation(id);
+    },
+    reviewsForLocation: ({ id }, _, { dataSources }) => {
+      return dataSources.reviewsAPI.getReviewsForLocation(id);
+    },
+  },
   Mutation: {
     submitReview: (_, { locationReview }, { dataSources }) => {
       const newReview =
